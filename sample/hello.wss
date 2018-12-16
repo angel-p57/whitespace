@@ -1,0 +1,27 @@
+push -1   # end of string
+push 10   # NL
+push 33   # !
+push 101  # e
+push 99   # c
+push 97   # a
+push 112  # p
+push 83   # S
+push 101  # e
+push 116  # t
+push 105  # i
+push 104  # h
+push 87   # W
+push 32   # SP
+push 44   # ,
+push 111  # o
+push 108  # l
+dup       # l
+push 101  # e
+push 72   # H
+mark LOOP
+ dup
+ jneg LEND
+ putc
+ jump LOOP
+mark LEND
+end
