@@ -1,0 +1,53 @@
+# 合成数列の和アドベントカレンダー WhiteSpace編
+#   https://qiita.com/angel_p_57/items/81f1bcb2f166b4b9e646
+# カウンタはヒープアドレス0で管理、和と加算候補を積む
+push 0
+dup
+dup
+dup
+geti
+# メインループ
+mark null
+pop # ループの最初は余分な1要素があるはず
+push 1
+add
+# 試し割り用のループ ( 負の除数で回す )
+push -1
+mark +0
+push 1
+sub
+# 除数が小さくなり過ぎたら非合成数
+copy +1
+copy +1
+dup
+mul
+sub
+jneg null
+# 割り切れない場合は剰余が負なのでループを進む
+copy +1
+copy +1
+mod
+jneg +0
+pop
+# 合成数なので加算
+swap
+copy +1
+add
+swap
+# カウンタをヒープから引き出してデクリメント
+push 0
+dup
+retr
+push 1
+sub
+dup
+jzero -0 # 指定個数足したら終了処理へ
+# カウンタをヒープに保存し直してループを進む
+stor
+dup
+jump null
+# 終了処理、余分な要素を捨てて合計を出力
+mark -0
+stor
+pop
+puti
