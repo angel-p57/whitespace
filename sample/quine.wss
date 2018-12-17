@@ -1,0 +1,37 @@
+# WhiteSpace Quine 406byte
+# http://golf.shinh.org/reveal.rb?Quine/angel_p57_1541499877&ws
+push +249073879751550812155196951124007364635101253229278399792437436149752581896(248b)  # 0000: ssstsssttsstttttssstssssttttststststttsssststssttssttttststsssttsttsttsttstttssssstttttsttststtttsssttsstttststsstssssssttttsttttttttstttsstsssssttsttttssttssststttstttssttttsssssttssssssttstttstttsssttststttstttstttsttttssstsstststststtssttttsssstsssn
+dup           # 0252: sns
+mark +0(0b)   # 0255: nsssn
+swap          # 0260: snt
+copy +1(1b)   # 0263: stsstn
+push +2(2b)   # 0269: ssstsn
+mod           # 0275: tstt
+add           # 0279: tsss
+push +3(2b)   # 0283: sssttn
+mul           # 0289: tssn
+swap          # 0293: snt
+push +2(2b)   # 0296: ssstsn
+div           # 0302: tsts
+dup           # 0306: sns
+dup           # 0309: sns
+mark -0(0b)   # 0312: nsstn
+jzero null    # 0317: ntsn
+pop           # 0321: snn
+jump +0(0b)   # 0324: nsnsn
+mark null     # 0329: nssn
+dup           # 0333: sns
+push +3(2b)   # 0336: sssttn
+mod           # 0342: tstt
+push +1(1b)   # 0346: ssstn
+sub           # 0351: tsst
+push +24(5b)  # 0355: sssttsssn
+mod           # 0364: tstt
+push +9(4b)   # 0368: ssstsstn
+add           # 0376: tsss
+putc          # 0380: tnss
+push +3(2b)   # 0384: sssttn
+div           # 0390: tsts
+dup           # 0394: sns
+jzero -0(0b)  # 0397: ntstn
+jump null     # 0402: nsnn
