@@ -1,30 +1,30 @@
-# WhiteSpace Quine 355 bytes
-# http://golf.shinh.org/reveal.rb?Quine/angel_p57_1669691076&ws
-push +103944911523970094451128311422974517738399785992742576435932710268(216b)  # 0000: sssttttttsstststtstssstssttttsssttsstttstsstttstststtsttsttssststttststtttssststttsttststsssttstssssttssttssstsssssssttttttsttsttssttttsttstsstttstsstssttssttsssssssststssssststttsststtttttststststtttsssstssstststttttssn
-push +2(2b)   # 0220: ssstsn
-div           # 0226: tsts
-push +0(0b)   # 0230: sssn
-dup           # 0234: sns
-call +0(0b)   # 0237: nstsn
-call +0(0b)   # 0242: nstsn
-dup           # 0247: sns
-push +2(2b)   # 0250: ssstsn
-call null     # 0256: nstn
-push +3(2b)   # 0260: sssttn
-mark null     # 0266: nssn
-copy +1(1b)   # 0270: stsstn
-jzero -0(0b)  # 0276: ntstn
-copy +1(1b)   # 0281: stsstn
-copy +1(1b)   # 0287: stsstn
-div           # 0293: tsts
-copy +1(1b)   # 0297: stsstn
-call null     # 0303: nstn
-mark -0(0b)   # 0307: nsstn
-mod           # 0312: tstt
-mark +0(0b)   # 0316: nsssn
-push -24(5b)  # 0321: sstttsssn
-mod           # 0330: tstt
-push +32(6b)  # 0334: ssstsssssn
-add           # 0344: tsss
-putc          # 0348: tnss
-ret           # 0352: ntn
+# WhiteSpace Quine 333 bytes
+# http://golf.shinh.org/reveal.rb?Quine/angel_p57_1669718020&ws
+push +7969228294440588444206358371410407764689382769860480534316220(203b)  # 0000: ssstssttttststtsstsstsstsssssttssttsssssssttsstsssttsststtsttstttttsttttstttststtssttsttssssstsssstttttttsstststtststssstttsssssttsssstssssststssttsssttstsststtstsstttsttssssttttttsststtstssssssstsststtttssn
+push +0(0b)   # 0207: sssn
+dup           # 0211: sns
+call +0(0b)   # 0214: nstsn
+call +0(0b)   # 0219: nstsn
+dup           # 0224: sns
+push +2(2b)   # 0227: ssstsn
+call null     # 0233: nstn
+push +3(2b)   # 0237: sssttn
+mark null     # 0243: nssn
+swap          # 0247: snt
+copy +1(1b)   # 0250: stsstn
+div           # 0256: tsts
+dup           # 0260: sns
+jzero -0(0b)  # 0263: ntstn
+dup           # 0268: sns
+copy +2(2b)   # 0271: stsstsn
+call null     # 0278: nstn
+mark -0(0b)   # 0282: nsstn
+swap          # 0287: snt
+mod           # 0290: tstt
+mark +0(0b)   # 0294: nsssn
+push -24(5b)  # 0299: sstttsssn
+mod           # 0308: tstt
+push +32(6b)  # 0312: ssstsssssn
+add           # 0322: tsss
+putc          # 0326: tnss
+ret           # 0330: ntn
